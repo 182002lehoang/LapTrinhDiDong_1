@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("bai 1,2:");
+
+        function calculateBMI(mass, height) {
+            return mass / height ** 2;
+        };
+
+        const Markmass = 78;
+        const Markheight = 1.69;
+        const Johnmass = 95;
+        const Johnheight = 1.88;
+
+        const MarkBMI = calculateBMI(Markmass, Markheight);
+        const JohnBMI = calculateBMI(Johnmass, Johnheight);
+
+        const markHigherBMI = MarkBMI > JohnBMI;
+
+
+
+        console.log("BMI Mark: ", MarkBMI);
+        console.log("BMI John: ", JohnBMI);
+        console.log(markHigherBMI);
+
+        console.log("bai 3:");
+
+        const dolphinsScores = [96, 108, 89];
+        const koalasScores = [88, 91, 110];
+
+        const dolphinsAverageScore = dolphinsScores.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue;
+        }, 0) / dolphinsScores.length;
+
+        const koalasAverageScore = koalasScores.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue;
+        }, 0) / koalasScores.length;
+
+        let winner;
+
+        if (dolphinsAverageScore > koalasAverageScore && dolphinsAverageScore >= 100) {
+            winner = "Dolphins";
+        } else if (
+            koalasAverageScore > dolphinsAverageScore &&
+            koalasAverageScore >= 100
+        ) {
+            winner = "Koalas";
+        } else {
+            winner = "Draw";
+        }
+        console.log(`The winner is ${winner}`);
+
+        console.log("bai 4:");
+
+
+        var bill = 275;
+        var tip = (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+        console.log("bill and tip :", bill + tip)
+
+        console.log("bai 6:");
+
+        
+        const calcTip = (billValue) => {
+            const tip = billValue >= 50 && billValue >= 300 ? billValue * 0.15 : billValue * 0.2
+            return tip;
+        }
+
+        const bills = [125, 555, 44];
+        const tips = bills.map(bill => calcTip(bill));
+        const totals = bills.map(bill => bill + tips[bills.indexOf(bill)]);
+        console.log("Tip: " + tips);
+        console.log("totals: " + totals);
+
+    </script>
+
+</body>
+
+</html>
