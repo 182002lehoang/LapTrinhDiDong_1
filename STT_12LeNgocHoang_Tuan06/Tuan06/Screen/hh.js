@@ -4,4 +4,4 @@ import { StyleSheet, Text, View , Image, Pressable} from 'react-native';
 const hh =()=>{
 
 }
-export default hh;
+export default hh;  
