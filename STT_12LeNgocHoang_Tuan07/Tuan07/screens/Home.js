@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,Image, Pressable,style} from 'react-native';
 import dataHome from '../dataHome';
+import { useNavigation } from '@react-navigation/native';
+import React  from 'react';
 
 const Home =()=>{
+    const navigation = useNavigation();
     return(
         <View style={styles.container}>
                <View style={styles.view1}>
@@ -44,7 +47,7 @@ const Home =()=>{
                       </Image>
                   </Pressable>
 
-                  <Pressable>
+                  <Pressable onPress={()=> {navigation.navigate('Shop')}} >
                     <Image style={styles.img3} source={require('../assets/IMG/home.png')}></Image>
                   </Pressable>
 
