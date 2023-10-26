@@ -54,8 +54,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'pink',
         borderRadius: 20,
         width: 360,
-        height: 388,
-        marginRight:20
+        height: 388
 
     },
     img: {

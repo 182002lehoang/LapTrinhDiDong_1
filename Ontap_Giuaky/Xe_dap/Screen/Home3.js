@@ -1,13 +1,21 @@
-import React from "react";
+import { useRoute } from "@react-navigation/native";
+import React, { useEffect } from "react";
 import { View, StyleSheet, Text, Image, Pressable } from "react-native";
 
 const Home3 = ({navigation}) => {
+    const route = useRoute();
+    const item = route.params;
+    useEffect(()=>{
+        if(route.params?.selecitem){
+
+        }
+    },[route.params?.selecitem]);
     return (
         <View style={styles.container}>
             <View style={styles.view}>
-                <Image style={styles.img} source={require('../assets/IMG/xedo1.png')}></Image>
+                <Image style={styles.img} source={item.imgae1}></Image>
             </View>
-            <Text style={styles.text}>Pina Mountain</Text>
+            <Text style={styles.text}>{item.name}</Text>
             <View style={styles.view1}>
                 <Text style={styles.text2}>15% OFF I 350$</Text>
                 <Text style={styles.text1}>499$</Text>

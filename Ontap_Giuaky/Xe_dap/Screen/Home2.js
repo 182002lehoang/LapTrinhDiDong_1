@@ -40,7 +40,7 @@ const Home2 = ({navigation}) => {
                     data={bike}
                     renderItem={({item}) =>(
                             <Pressable onPress={()=>(
-                                navigation.navigate('Home3')
+                                navigation.navigate('Home3',item)
                             )} style={styles.view2}>
                                 <Image source={require('../assets/IMG/tim1.png')} style={styles.img}></Image>
                                 <Image source={item.imgae1} style={styles.img2} ></Image>
