@@ -54,7 +54,7 @@ const Shop = () => {
                     </Image>
                 </Pressable>
 
-                <Pressable>
+                <Pressable onPress={()=>{navigation.navigate('Home')}}>
                     <Image style={styles.img3} source={require('../assets/IMG/home.png')}></Image>
                 </Pressable>
 

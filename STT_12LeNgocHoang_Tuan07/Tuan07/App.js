@@ -4,7 +4,7 @@ import navi from '../Tuan07/navi/navigation';
 
 export default function App() {
   return (
-    <navi/>
+    <navi />
   );
 }
 
